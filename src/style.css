@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /*primary colors*/
+  --soft-blue: hsl(215, 51%, 70%);
+  --cyan: hsl(178, 100%, 50%);
+
+  /*neutral colors*/
+  --very-dark-blue-body-bg: hsl(217, 54%, 11%);
+  --very-dark-blue-card-bg: hsl(216, 50%, 16%);
+  --very-dark-blue-line: hsl(215, 32%, 27%);
+  --white: hsl(0, 0%, 100%);
+}
+
+body {
+  background-color: var(--very-dark-blue-body-bg);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+main {
+  width: 20.19rem; /*323px*/
+  height: 33.75rem; /*540px*/
+  background-color: var(--very-dark-blue-card-bg);
+  text-align: center;
+  border-radius: 15px;
+}
+
+h1 {
+  font-size: 1.31rem; /*21px*/
+  font-weight: 600;
+}
+
+h1:hover {
+  cursor: pointer;
+  color: var(--cyan);
+}
+
+p {
+  font-size: 0.88rem; /*14px*/
+  font-weight: 300;
+  color: var(--soft-blue);
+}
+
+.container {
+  margin: 1.5rem; /*24px*/
+}
+
+.container img {
+  width: 17.38rem; /*278px*/
+  height: 17.38rem; /*278px*/
+  border-radius: 8px;
+}
+
+/* .container img::before {
+  /*before -> cria um elemento fantasma */
+/* content: ''; */
+/* height: 100%; */
+/* width: 100%; */
+/* background: var(--cyan); */
+/* position: absolute; position -> habilitando top, right, bottom, left e z-index */
+/* top: -16.8%; cálculo do Maykão, com regra de 3 */
+/* left: 16.7%; */
+/* z-index: 0; */
+/*  */
+
+.container img:hover {
+  cursor: pointer;
+}
+
+.text-box {
+  font-family: 'Outfit', sans-serif;
+  color: var(--white);
+  margin-top: 1.5rem; /*24px*/
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 1.13rem; /*18px*/
+}
+
+.extra-information {
+  display: flex;
+  justify-content: space-between;
+  height: 1.13rem;
+}
+
+.extra-information img {
+  height: 0.88rem;
+  width: auto;
+}
+
+.extra-information p {
+  display: inline;
+  margin-left: 0.38rem; /*6.08px*/
+}
+
+.ethereum-information p {
+  color: var(--cyan);
+  font-weight: 600;
+}
+
+.ethereum-information,
+.time-information {
+  display: flex;
+  align-items: center;
+}
+
+.divider {
+  border: 0.2px solid var(--very-dark-blue-line);
+}
+
+.author-information {
+  display: flex;
+  align-items: center;
+}
+
+.author-information img {
+  width: 1.94rem; /*31px*/
+  height: 1.94rem; /*31px*/
+  margin-right: 0.88rem;
+  border: 1px solid var(--white);
+  border-radius: 50%;
+}
+
+.author-information span {
+  color: var(--white);
+  font-weight: 400;
+}
+
+.author-information span:hover {
+  cursor: pointer;
+  color: var(--cyan);
+}
