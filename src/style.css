@@ -75,6 +75,7 @@ p {
   background: var(--cyan-alternative);
   position: absolute; /*position -> habilitando top, right, bottom, left e z-index */
   z-index: 0;
+  border-radius: 8px;
 }
 
 .container .image:hover {
