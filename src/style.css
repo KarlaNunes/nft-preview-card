@@ -69,13 +69,17 @@ p {
 
 .container .image::before {
   /*before -> cria um elemento fantasma */
-  content: '';
+  content: url(../images/icon-view.svg);
   width: 17.38rem; /*278px*/
   height: 17.38rem; /*278px*/
   background: var(--cyan-alternative);
   position: absolute; /*position -> habilitando top, right, bottom, left e z-index */
   z-index: 0;
   border-radius: 8px;
+
+  /*centralizando ícone (substitui o flex)*/
+  display: grid;
+  place-content: center;
 }
 
 .container .image:hover {
