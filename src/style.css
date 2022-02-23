@@ -33,6 +33,7 @@ main {
   background-color: var(--very-dark-blue-card-bg);
   text-align: center;
   border-radius: 15px;
+  box-shadow: 0px 0px 20px rgba(47, 65, 91, 0.16);
 }
 
 h1 {
@@ -51,6 +52,10 @@ p {
   color: var(--soft-blue);
 }
 
+:hover {
+  transition: 0.3s;
+}
+
 .container {
   margin: 1.5rem; /*24px*/
 }
@@ -60,30 +65,37 @@ p {
   height: 17.38rem; /*278px*/
 }
 
-.container .image img {
-  width: 100%;
-  height: 100%;
-  border-radius: 8px;
-  /* position: absolute; */
-}
-
 .container .image::before {
   /*before -> cria um elemento fantasma */
   content: url(../images/icon-view.svg);
+
   width: 17.38rem; /*278px*/
   height: 17.38rem; /*278px*/
   background: var(--cyan-alternative);
   position: absolute; /*position -> habilitando top, right, bottom, left e z-index */
-  z-index: 0;
+  z-index: 1;
   border-radius: 8px;
 
-  /*centralizando ícone (substitui o flex)*/
+  /*centralizando ícone (substitui o centralizar do flex)*/
   display: grid;
   place-content: center;
+
+  /*transição para aparecer/desaparecer na tela*/
+  opacity: 0;
+  transition: 0.3s;
 }
 
-.container .image:hover {
+.container .image:hover::before {
   cursor: pointer;
+
+  /*transição para aparecer/desaparecer na tela*/
+  opacity: 1;
+}
+
+.container .image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
 }
 
 .text-box {
